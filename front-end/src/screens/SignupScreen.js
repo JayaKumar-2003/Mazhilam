@@ -1,20 +1,29 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import './SignupScreen.css';
 import Axios from 'axios';
 import Girl from '../images/Girl.jpg';
-
+// import { Store } from '../Store';
+import {toast} from 'react-toastify';
+import { getError } from '../utils';
+// import { useNavigate } from 'react-router-dom';
 function SignupScreen() {
     const [name,SetName] = useState('');
     const [email,SetEmail]= useState('');
     const [password,SetPassword] = useState('');
-
     const submitHandler = async (e) =>{
-            const { data } = await Axios.post('/users/signup',{
-                name,
-                email,
-                password,
-            });
-            
+       
+            e.preventDefault();
+            try {
+                const { data } = await Axios.post('/signup',{
+                    name,
+                    email,
+                    password,
+                });
+               
+            }
+            catch(err) {
+                toast.error(getError(err));
+            }      
     };
     return(
         <div>
@@ -34,7 +43,7 @@ function SignupScreen() {
                     <label>Password</label><br></br>
                     <input type='password' id='name' className='input' onChange={(e) =>SetPassword(e.target.value)}></input>
                     <br></br>
-                    <input type='button'value='Signin'className='input'></input>
+                    <input type='submit' value='Submit'></input>
                 </form>
             </div>
         </div>

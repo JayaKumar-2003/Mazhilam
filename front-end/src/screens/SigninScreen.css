@@ -1,0 +1,35 @@
+.body {
+    margin: 1px;
+    margin-left: 2px;
+    width: 100%;
+    display: flex;
+}
+ .brand {
+    margin-left: 20rem;
+    color: antiquewhite;
+    font-size: 2rem;
+ }
+.image {
+     width: 48%;
+}
+.form {
+    width: 20rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60rem;
+    margin-top: -20rem;
+}
+.form-inside {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+
+    
+}
+.one {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }

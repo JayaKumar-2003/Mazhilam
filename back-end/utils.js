@@ -1,16 +1,17 @@
 import jwt from "jsonwebtoken";
 
-export const generatetoken = () => {
+export const generatetoken = (user) => {
+    console.log('hrllo');
     return jwt.sign(
         {
-            _id : user._id,
+            _id:user._id,
             name:user.name,
-            email:user.email,
-            isAdmin: user.isAdmin,
+            email:user.email,   
+            isAdmin:user.isAdmin,
         },
-        process.env.Jwt_SECRET,
+        process.env.JWT_SECRET,
         {
-            expiresIn: '30d',
+            expiresIn:'30d',
         }
     );
 };
