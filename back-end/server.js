@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended : true}));
 app.use('/api/seed',seedRouter);
 app.use('/api/users',userRouter);
 
-// app.use((err,req,res,next)=> {
-//     res.status(500).send({ message:err.message});
-// });
+app.use((err,req,res,next)=> {
+    res.status(500).send({ message:err.message});
+});
 const port = process.env.PORT || 5000;
 
 app.listen(port,()=> {

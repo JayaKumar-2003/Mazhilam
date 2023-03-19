@@ -1,0 +1,59 @@
+.right-container {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #343a40;
+    padding:0rem 2rem 2rem 2rem;
+    height: 580px;
+    width: 150px;
+}
+.brand-right {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.right-down {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.dashboard {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.payment {
+    border-bottom: 1px solid black;
+}
+.icon {
+    margin-left: 2rem;
+}
+.left-container {
+    width: 100%;
+}
+.left-container label {
+    margin-top: 1.0rem;
+}
+.nav-top {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    width: 100%;
+    background-color: #007bff;
+    padding-bottom: 1.4rem;
+    
+}
+.nav-top label {
+    color: white;
+    font-weight: 500
+}
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+.text {
+    color: white;
+}

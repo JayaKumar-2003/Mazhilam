@@ -33,3 +33,17 @@
         align-items: center;
         justify-content: space-between;
     }
+.link {
+    margin-left: 11rem;
+    color: blueviolet;
+}
+
+.forgot {
+    background-color: blueviolet;
+    display: flex;
+    margin-top: -20rem;
+    width: 10rem;
+    margin-left: 60rem;
+    flex-direction: column;
+    gap: 2rem;
+}
