@@ -16,6 +16,10 @@ function reducer (state,action){
             return {...state,userInfo:action.payload};
         default:
             return state;
+       case 'DETAILS':
+        return {
+             ...state,
+      };
     }
 }
 export function StoreProvider(props) {

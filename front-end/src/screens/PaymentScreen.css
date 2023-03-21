@@ -5,7 +5,8 @@
     gap: 2rem;
     background-color: #343a40;
     padding:0rem 2rem 2rem 2rem;
-    height: 580px;
+    min-height: 42rem;
+    height: 100%;
     width: 150px;
 }
 .brand-right {
@@ -56,4 +57,24 @@ body {
 }
 .text {
     color: white;
+}
+.table {
+    margin-left: -65rem;
+    margin-top: 7rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    margin-left: -70rem;
+    margin-top: 7rem;
+    height: 4rem;
+    width: 50rem;
+    background-color: #cfd5db;
+    border: 1px solid black;
+    border-radius: 2rem;
 }

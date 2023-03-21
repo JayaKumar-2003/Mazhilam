@@ -1,24 +1,32 @@
-import React, {  useState } from 'react';
+import React, {  useContext, useState } from 'react';
 import './SignupScreen.css';
 import Axios from 'axios';
 import Girl from '../images/Girl.jpg';
 // import { Store } from '../Store';
 import {toast} from 'react-toastify';
 import { getError } from '../utils';
-// import { useNavigate } from 'react-router-dom';
+import { Store } from '../Store';
+import { useNavigate } from 'react-router-dom';
 function SignupScreen() {
     const [name,SetName] = useState('');
     const [email,SetEmail]= useState('');
     const [password,SetPassword] = useState('');
+
+    const navigate = useNavigate();
+    const {state , dispatch : ctxDispatch} = useContext(Store);
+    const {userInfo} = state;
     const submitHandler = async (e) =>{
        
             e.preventDefault();
             try {
-                const { data } = await Axios.post('/signup',{
+                const { data } = await Axios.post('api/users/signup',{
                     name,
                     email,
                     password,
                 });
+                ctxDispatch({type: 'USER_SIGNIN', payload: data})
+                localStorage.setItem('userInfo', JSON.stringify(data));
+                navigate( '/signin');
                
             }
             catch(err) {
