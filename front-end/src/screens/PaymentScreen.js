@@ -27,7 +27,7 @@ function PaymentScreen() {
                         {/* <img src={dashboard} alt='re-load' className='icon'></img> */}
                         <label className='text'>Dashboard</label>
                     </div>
-                   <div className='payment' onClick={(e)=> {navigate("/signup")}}>
+                   <div className='payment' onClick={(e)=> {navigate("/addlist")}}>
                         <label className='text'>Add List</label>
                    </div>
                 </div>
@@ -44,7 +44,7 @@ function PaymentScreen() {
             <div className='content'>
                 <div className='box'>
                 <div className='add'>
-                    <span>Add</span>
+                    {/* <span>Add</span> */}
                 </div>
             </div>
             <div className='details'>

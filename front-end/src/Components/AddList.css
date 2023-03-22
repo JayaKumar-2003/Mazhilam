@@ -1,0 +1,18 @@
+.one {
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+   flex-direction: column;
+    gap: 3rem;
+  margin-left: 40rem;
+  border: 2ps solid black;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12rem;
+}
+.Brand {
+    font-size: 2rem;
+    margin-left: 30rem;
+    font-weight: 600;
+    padding-top: 2rem;
+}

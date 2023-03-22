@@ -20,7 +20,7 @@ export default function SigninScreen() {
     const [password,SetPassword]=useState('');
     const {state , dispatch : ctxDispatch} = useContext(Store);
     console.log(state);
-    // const {userinfo} = state;
+    const {userinfo} = state;
     const SubmitHandler = async (e) => {
         e.preventDefault();
         try {
@@ -46,6 +46,8 @@ export default function SigninScreen() {
         <div className='Signin'>
             <div className='body'>
             <img className='image' src={Girl} alt='Reload Page'></img>
+            </div>
+            <div className='brand-div'>
             <h2 className='brand'>MAZHILAM</h2>
            </div>
             <div className='form'>

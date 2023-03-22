@@ -26,7 +26,7 @@ function SignupScreen() {
                 });
                 ctxDispatch({type: 'USER_SIGNIN', payload: data})
                 localStorage.setItem('userInfo', JSON.stringify(data));
-                navigate( '/signin');
+                navigate( '/');
                
             }
             catch(err) {

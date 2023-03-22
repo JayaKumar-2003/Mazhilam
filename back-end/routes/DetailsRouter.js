@@ -26,17 +26,17 @@ DetailsRouter.post(
             }
         );
         const details = await NewDetails.save();
-        // res.send({
-        //     name:details.name,
-        //     number:details.number,
-        //     Address:details.Address,
-        //     Pending:details.Pending,
-        //       History :{
-        //      Amount:details.Amount,
-        //     Description:details.Description,
-        //    }
+        res.send({
+            name:details.name,
+            number:details.number,
+            Address:details.Address,
+            Pending:details.Pending,
+              History :{
+             Amount:details.Amount,
+            Description:details.Description,
+           }
 
-        // });
+        });
         console.log(details);
     })
 );
